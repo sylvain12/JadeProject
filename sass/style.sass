@@ -1,0 +1,302 @@
+*, html
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  font-family: 'Open sans', sans-serif
+
+ul, ol
+  list-style: none
+  margin: 0
+  padding: 0
+
+a 
+  text-decoration: none
+
+img 
+  width: 100%
+
+// .title
+//   position: relative
+//   &::after
+//     content: ''
+//     height: 5px
+//     width: 100%
+//     background: red
+//     display: block
+//     position: absolute
+//     left: 0
+
+section
+  padding: 50px 20px
+  text-align: center
+
+
+.container
+  max-width: 960px
+  margin: 0 auto
+
+.btn 
+  padding: 10px 15px
+  background: #fff
+  font-weight: 700
+  color: #555
+  border: 0px solid transparent
+  transition: all .2s
+  
+  &:hover
+    border: 1px solid #fff 
+    background: transparent
+    color: #fff
+  
+  &-rounded
+    border-radius: 5px
+  
+  &-small 
+    font-size: 15px
+    padding: 8px 10px
+  
+  &-outline 
+    border: 1px solid #fff 
+    background: transparent
+    color: #fff
+
+    &:hover
+      background: #fff
+      color: #555
+
+
+.section-heading
+  & > *
+    margin: 0
+  hr 
+    border: 1px solid red
+    width: 50%
+    display: inline-block
+    text-align: center
+  h1 
+    margin-bottom: 10px
+    text-transform: uppercase
+    color: #555
+  p
+    margin-top: 20px
+    line-height: 1.5
+    color: #888
+    margin-bottom: 100px
+
+// NAVIGATION
+#main-header
+  z-index: 9999
+  border-bottom: 2px solid #fff
+  position: fixed
+  width: 100%
+  left: 0
+  top: 0
+  background: #888
+  opacity: 0.8
+  display: flex
+  justify-content: space-around
+  align-items: center
+
+  .logo
+    height: 30px
+    width: auto
+
+  nav 
+    justify-self: center
+
+    ul 
+      display: flex
+      justify-content: center
+     
+
+    li
+      margin-right: 20px
+      margin-bottom: 0
+      &:last-child
+        margin-right: 0
+
+    a 
+      display: block
+      color: #fff
+      padding: 10px 0
+      text-transform: uppercase
+      opacity: 0.5
+      position: relative
+      transition: all 0.5s
+
+      &::after
+        content: ''
+        position: absolute
+        display: block
+        background: #fff
+        height: 3px
+        bottom: 2px
+        left: 0
+        width: 0
+        transition: width 0.3s
+       
+      &:hover::after
+        width: 100%
+
+      &:hover
+        opacity: 1
+
+#hero
+  height: 100vh
+  width: 100%
+  position: relative
+  // z-index: -1
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  overflow: hidden
+  // background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('../img/hero-bg.jpg')
+  background-size: cover
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  animation: slider 40s infinite
+
+  .loader
+    //z-index: 1
+    animation: slider 2s
+
+
+  .hero-content
+    //z-index: 15
+    color: #ffffff
+
+    h1
+      text-transform: uppercase
+      font-size: 50px
+      font-weight: 100
+      margin-bottom: 20px
+
+    p
+      line-height: 1.7
+      margin-bottom: 30px
+    
+    a 
+      margin-right: 10px
+      //color: #fff
+      font-weight: 700
+
+.section-b
+  background: #eee
+
+  img 
+    height: 500px
+    width: auto
+
+  .demo-phone
+    display: flex
+    flex-direction: column
+    margin-top: 90px
+
+  li
+    font-size: 18px
+    margin-bottom: 20px
+  
+  i 
+    margin-top: 5px
+    font-size: 30px
+    margin-left: 20px
+    color: red
+
+  .phone-logo
+    display: flex
+    img 
+      height: 80px
+      overflow: hidden 
+
+
+.section-c
+  background: #ffffff
+
+  .card
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.4)
+    border-radius: 3px
+
+    &-header
+      h2 
+        margin-bottom: 5px
+
+    &-header, &-footer
+      background: #f4f4f4
+    
+    &-footer 
+      padding: 10px 0
+
+      a 
+        padding: 8px 20px
+        color: #fff 
+        background: #1abc9c
+        border-radius: 20px
+        opacity: 0.7
+
+footer 
+  background: #222
+  padding: 50px 0
+  color: #ccc
+  text-align: center
+
+  ul 
+    display: flex
+    justify-content: center
+
+    li 
+      margin-right: 20px
+      width: 40px
+      // height: 40px
+      position: relative
+
+      
+  
+  a 
+    height: 30px
+    width: 30px
+    border-radius: 50%
+    // background: red
+    border: 1px solid #ccc
+    color: #ccc
+    position: absolute
+    left: 0
+
+    &:hover
+      background: blue
+      border: 1px solid transparent
+      color: #fff
+      
+     
+      color: #fff
+  
+  i.fa
+    padding: 3px 11px 0px 0
+    width: 40px
+    font-size: 22px
+    &-facebook:hover
+      // color: blue
+
+@keyframes slider
+  0% 
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('../img/hero-bg.jpg')
+  30% 
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('../img/hero-bg.jpg')
+
+  30.01% 
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('../img/image1.jpeg')
+  60% 
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('../img/image1.jpeg')
+
+  60.01%
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('../img/image2.jpeg')
+  100%
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('../img/image2.jpeg')
+    
+  
+
+    
+
